@@ -1,15 +1,14 @@
 {
-    "name": "lagman/yii2-upload-behavior",
+    "name": "pafnow/yii2-upload-behavior",
     "description": "Yii2 file/image upload behavior",
 	"keywords": ["file", "image", "upload", "behavior", "resize", "thumb"],
-    "license": "MIT",
+    "license": "BSD 3-Clause",
     "authors": [
         {
-            "name": "Alexey Samoylov",
-            "email": "alexey.samoylov@gmail.com"
+            "name": "Pafnow",
+            "email": "pafnow@hotmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": "*",
@@ -17,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "lagman\\upload\\": "./"
+            "pafnow\\upload\\": "./"
         }
     }
 }
