@@ -110,7 +110,10 @@ class ImageUploadBehavior extends FileUploadBehavior
                 $thumb = new GD($path);
                 if (isset($config['resizeUp']))
                     $thumb->setOptions(array('resizeUp'=>$config['resizeUp']));
-                $thumb->adaptiveResize($config['width'], $config['height']);
+                if (isset($config['adaptive']) && $config['adaptive'] === false)
+                    $thumb->resize($config['width'], $config['height']);
+                else //By default we do adaptiveResize
+                    $thumb->adaptiveResize($config['width'], $config['height']);
                 @mkdir(pathinfo($thumbPath, PATHINFO_DIRNAME), 777, true);
                 $thumb->save($thumbPath);
             }

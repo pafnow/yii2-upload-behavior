@@ -51,7 +51,6 @@ class FileUploadBehavior extends \yii\base\Behavior
     /** @var \yii\web\UploadedFile */
     protected $file;
     
-    
     private $isEventsActif = true;
 
     /**
